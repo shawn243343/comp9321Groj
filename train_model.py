@@ -8,6 +8,7 @@ from sklearn.model_selection import cross_val_predict
 import matplotlib.pyplot as plt
 
 #load dataset
+#you may need change the csv file to what you want to implment. eg. "train_data_v1.csv"
 loaded_data = pd.read_csv("train_data_v1.csv")
 #std = StandardScaler()
 data_x = loaded_data[["country","year","winery","variety"]]
