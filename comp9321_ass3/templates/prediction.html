@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Price Prediction</title>
+    <style>
+        body {
+            background-color:#b3ecff;
+        }
+        h1 {
+            font-size:50px;
+            color:#cc0066;
+            text-align:center;
+        }
+        h2 {
+            font-size:40px;
+            color:#8e0811;
+            margin-top:5%;
+            text-align: center;
+        }
+        #back{
+            margin-left: 5%;
+            margin-top:5%;
+        }
+        #pred {
+            
+            font-size:20px;
+            color: black;
+            text-align: center;
+        }
+        #first {
+            margin-left: 25%;
+        }
+        a {
+            font-size: 20px;
+
+        }
+        a:link {
+            color: green; 
+            background-color: transparent; 
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+</style>
+    </style>
+</head>
+<body>
+    <form action="/" class="back_to_home" id="back">
+        <input type="submit" value="Back">
+    </form>
+
+
+    <h1>Price Prediction</h1>
+    <h2>Please input the attributes of wines: </h2>
+    <!-- submit the search input to prediction function-->
+    <form action="/Prediction" autocomplete="off" id="pred"> 
+        Country:<input type="text" name="country" maxlength="20" size="20" value="Italy"><br>
+        Variety:<input type="text" name="variety" maxlength="50" size="21" value="White Blend"><br>
+        Winery:<input type="text" name="winery" maxlength="50" size="21" value="Nicosia"><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="function_1" value="To predict" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="Reset input">
+    </form>
+    <br>
+    <a href="/Recommendation" target="_blank" id="first">Recommendation</a>&nbsp;&nbsp;
+    <a href=/AttributesComparison" target="_blank">Attributes comparison</a>&nbsp;&nbsp;
+    <a href="/RankRetrieve" target="_blank">Rank retrieve</a>&nbsp;&nbsp;
+    <a href="/PurchaseAddress" target="_blank">Purchase address</a>&nbsp;&nbsp;
+    <a href="/Comments" target="_blank">Comments</a>&nbsp;&nbsp;
+</body>
+</html>
