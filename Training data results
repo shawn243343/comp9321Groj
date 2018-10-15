@@ -1,0 +1,17 @@
+Here we use linear model to predict wine price.
+the parameters we got from trained model are showing below:
+w1=-0.1073
+w2= 0.0821
+w3= 0.2896
+
+Note: There is no intercept, since model can have a better perfermance without intercept.
+w1 is for Country
+w2 is for winery
+w3 is for variety
+
+When user input these three info, it should be found a corresponding value(number) in dict we provided, 
+then doing following calculation.
+
+For price prediction:
+
+price = country*w1 + winery*w2 + variety*w3
