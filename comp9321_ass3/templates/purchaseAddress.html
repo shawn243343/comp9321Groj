@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Price Prediction</title>
+    <title>Purchase address</title>
     <style>
         body {
             background-color:#b3ecff;
@@ -13,7 +13,7 @@
             text-align:center;
         }
         h2 {
-            font-size:40px;
+            font-size:30px;
             color:#8e0811;
             margin-top:5%;
             text-align: center;
@@ -22,14 +22,14 @@
             margin-left: 5%;
             margin-top:5%;
         }
-        #pred {
+        #purchase {
             
             font-size:20px;
             color: black;
             text-align: center;
         }
         #first {
-            margin-left: 25%;
+            margin-left: 27%;
         }
         a {
             font-size: 20px;
@@ -67,21 +67,22 @@
     </form>
 
 
-    <h1>Price Prediction</h1>
-    <h2>Please input the attributes of wines: </h2>
-    <!-- submit the search input to prediction function-->
-    <form action="/Prediction" autocomplete="off" id="pred"> 
-        Country:<input type="text" name="country"  size="100" value="Italy"><br>
-        Variety:<input type="text" name="variety"  size="101" value="White Blend"><br>
-        Winery:<input type="text" name="winery"  size="101" value="Nicosia"><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="function_1" value="Predict" >&nbsp;&nbsp;&nbsp;&nbsp;
+    <h1>Purchase address</h1>
+    <h2>Please input the name to search: </h2>
+    <!-- submit the search input to purchaseAddress function-->
+    <form action="/purchaseAddress" autocomplete="off" id="purchase"> 
+        Name:<br>
+        <input type="text" name="country"  size="50" value="Nicosia 2013 VulkÃ  Bianco  (Etna)"><br>
+        <input type="submit" class="function_6" value="Search" >&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="reset" value="Reset">
     </form>
     <br>
-    <a href="/recommendation" target="_blank" id="first">Recommendation</a>&nbsp;&nbsp;
+    <br>
+    <br>
+    <a href="/prediction" target="_blank"  id="first">Prediction</a>&nbsp;&nbsp;
+    <a href="/recommendation" target="_blank">Recommendation</a>&nbsp;&nbsp;
     <a href="/attributesComparison" target="_blank">Attributes comparison</a>&nbsp;&nbsp;
     <a href="/rankRetrieve" target="_blank">Rank retrieve</a>&nbsp;&nbsp;
-    <a href="/purchaseAddress" target="_blank">Purchase address</a>&nbsp;&nbsp;
     <a href="/comments" target="_blank">Comments</a>&nbsp;&nbsp;
 </body>
 </html>

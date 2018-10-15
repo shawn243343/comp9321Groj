@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Price Prediction</title>
+    <title>Attributes comparison</title>
     <style>
         body {
             background-color:#b3ecff;
@@ -22,14 +22,15 @@
             margin-left: 5%;
             margin-top:5%;
         }
-        #pred {
+        #comp {
             
             font-size:20px;
             color: black;
-            text-align: center;
+            text-align: left;
+            margin-left: 25%
         }
         #first {
-            margin-left: 25%;
+            margin-left: 27%;
         }
         a {
             font-size: 20px;
@@ -67,19 +68,19 @@
     </form>
 
 
-    <h1>Price Prediction</h1>
-    <h2>Please input the attributes of wines: </h2>
-    <!-- submit the search input to prediction function-->
-    <form action="/Prediction" autocomplete="off" id="pred"> 
-        Country:<input type="text" name="country"  size="100" value="Italy"><br>
-        Variety:<input type="text" name="variety"  size="101" value="White Blend"><br>
-        Winery:<input type="text" name="winery"  size="101" value="Nicosia"><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="function_1" value="Predict" >&nbsp;&nbsp;&nbsp;&nbsp;
+    <h1>Attributes comparison</h1>
+    <h2>Please select two wines: </h2>
+    <!-- submit the search input to comparison function-->
+    <form action="/attributesComparison" autocomplete="off" id="comp"> 
+        Name#1:<input type="text" name="title1"  size="100" value="Nicosia 2013 VulkÃ  Bianco  (Etna)"><br>
+        Compare with<br>
+        Name#2:<input type="text" name="title2"  size="100" value="Quinta dos Avidagos 2011 Avidagos Red (Douro)"><br>
+        <input type="submit" class="function_4" value="Compare" style="margin-left: 25%" >&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="reset" value="Reset">
     </form>
     <br>
-    <a href="/recommendation" target="_blank" id="first">Recommendation</a>&nbsp;&nbsp;
-    <a href="/attributesComparison" target="_blank">Attributes comparison</a>&nbsp;&nbsp;
+    <a href="/prediction" target="_blank" id="first">Prediction</a>&nbsp;&nbsp;
+    <a href="/recommendation" target="_blank">Recommendation</a>&nbsp;&nbsp;
     <a href="/rankRetrieve" target="_blank">Rank retrieve</a>&nbsp;&nbsp;
     <a href="/purchaseAddress" target="_blank">Purchase address</a>&nbsp;&nbsp;
     <a href="/comments" target="_blank">Comments</a>&nbsp;&nbsp;

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Price Prediction</title>
+    <title>Comments review</title>
     <style>
         body {
             background-color:#b3ecff;
@@ -15,17 +15,20 @@
         h2 {
             font-size:40px;
             color:#8e0811;
-            margin-top:5%;
+            margin-top:1%;
             text-align: center;
         }
         #back{
             margin-left: 5%;
-            margin-top:5%;
+            margin-top:1%;
         }
-        #pred {
+        #comments {
             
             font-size:20px;
             color: black;
+            text-align: center;
+        }
+        #add {
             text-align: center;
         }
         #first {
@@ -67,21 +70,32 @@
     </form>
 
 
-    <h1>Price Prediction</h1>
-    <h2>Please input the attributes of wines: </h2>
+    <h1>Comments review</h1>
+    <h2>Please select one wine to review its comments: </h2>
     <!-- submit the search input to prediction function-->
-    <form action="/Prediction" autocomplete="off" id="pred"> 
-        Country:<input type="text" name="country"  size="100" value="Italy"><br>
-        Variety:<input type="text" name="variety"  size="101" value="White Blend"><br>
-        Winery:<input type="text" name="winery"  size="101" value="Nicosia"><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="function_1" value="Predict" >&nbsp;&nbsp;&nbsp;&nbsp;
+    <form action="/comments" autocomplete="off" id="comments"> 
+        Name:<br>
+        <input type="text" name="country"  size="50" value="Nicosia 2013 VulkÃ  Bianco  (Etna)">
+        <br>
+        <input type="submit" class="function_3" value="Review" >&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="reset" value="Reset">
     </form>
+    <h2 style="margin-top:1%">You can add your comment below:</h2>
+    <form action="/comments" autocomplete="off" id="add">
+        Name:<br>
+        <input type="text" name="country"  size="50" value="Nicosia 2013 VulkÃ  Bianco  (Etna)"><br>
+        Comment:<br>
+        <input type="text" name="add_comments" style="width:500px;height:350px">
+        <br>
+        <input type="submit" class="function_3_2" value="Add" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="Reset">
+
+    </form>
     <br>
-    <a href="/recommendation" target="_blank" id="first">Recommendation</a>&nbsp;&nbsp;
+    <a href="/prediction" target="_blank"  id="first">Prediction</a>&nbsp;&nbsp;
+    <a href="/recommendation" target="_blank">Recommendation</a>&nbsp;&nbsp;
     <a href="/attributesComparison" target="_blank">Attributes comparison</a>&nbsp;&nbsp;
     <a href="/rankRetrieve" target="_blank">Rank retrieve</a>&nbsp;&nbsp;
     <a href="/purchaseAddress" target="_blank">Purchase address</a>&nbsp;&nbsp;
-    <a href="/comments" target="_blank">Comments</a>&nbsp;&nbsp;
 </body>
 </html>
