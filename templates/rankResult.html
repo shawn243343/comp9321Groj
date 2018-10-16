@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Rank Retrieve</title>
+    <title>Rank Result</title>
     <style>
         body {
             background-color:aliceblue;
@@ -22,7 +22,6 @@
             margin-left: 5%;
             margin-top:5%;
         }
-
 
         a {
             font-size: 20px;
@@ -56,26 +55,18 @@
     </form>
 
 
-    <h1>Rank Retrieve</h1>
-    <h2>Please input the relative attributes of Rank: </h2>
+    <h1>Rank Result</h1>
     <!-- submit the search input to Rank function-->
-    <div style="text-align: center;">
-        <form action="/main/rankRetrieve" autocomplete="off" id="rankR">
-            Variety:<input type="text" name="variety"  size="50" value="White Blend"><br>
-            Country: <input type="text" name="country"  size="50" value="Italy"><br>
-            Price: <input type="text" name="price"  size="50" value="50"><br>
-            Top:<input type="number" name="top"  size="50" value="10" max="100" min="1"><br><br>
-            <input type="submit" class="function_5" value="Retrieve" >&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="reset" value="Reset">
-        </form>
+    <div class="table" style="text-align: center;">
+    {{table}}
     </div>
     <br>
     <br>
     <br>
-    <div style="margin-left: 43%;">
+    <div style="text-align: center;">
     <a href="/main/prediction" target="_blank" id="first">Prediction</a>&nbsp;&nbsp;
 
-    <!--<a href="/purchaseAddress" target="_blank">Purchase address</a>&nbsp;&nbsp;-->
+    <a href="/purchaseAddress" target="_blank">Purchase address</a>&nbsp;&nbsp;
     <a href="/main/comments" target="_blank">Comments</a>&nbsp;&nbsp;
     </div>
 </body>
