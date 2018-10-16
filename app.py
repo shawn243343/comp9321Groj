@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, flash, request
+from flask import Flask, render_template, redirect, url_for,flash
 from flask_bootstrap import Bootstrap
 from flask_login import login_required
 from flask_restplus import reqparse
@@ -21,10 +21,10 @@ def login():
             flash('login successful')
             global name
             name = form.username.data
-            return render_template('main.html', name=name)
+            return redirect(url_for('main'))
         else:
             flash('login failed')
-            return redirect(request.args.get('next') or url_for('main'))
+            return render_template('login.html', form=form)
     return render_template('login.html', title="Sign In", form=form)
 
 
@@ -49,7 +49,8 @@ def prediction():
     country = args.get('Country')
     variety = args.get('Variety')
     winery = args.get('Winery')
-    return render_template('prediction.html')
+    result = 100
+    return render_template('prediction.html',result=result)
 
 @app.route('/main/rankRetrieve',methods=['GET'])
 def rankRetrieve():

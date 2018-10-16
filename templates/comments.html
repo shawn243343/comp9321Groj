@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Comments review</title>
+    <style>
+        body {
+            background-color:aliceblue;
+        }
+        h1 {
+            font-size:50px;
+            color:#cc0066;
+            text-align:center;
+        }
+        h2 {
+            font-size:40px;
+            color:#8e0811;
+            margin-top:1%;
+            text-align: center;
+        }
+        #back{
+            margin-left: 5%;
+            margin-top:1%;
+        }
+        #comments {
+            
+            font-size:20px;
+            color: black;
+            text-align: center;
+        }
+        #add {
+            text-align: center;
+        }
+        #first {
+            margin-left: 43%;
+        }
+        a {
+            font-size: 20px;
+        }
+        a:link {
+            color: green; 
+            background-color: transparent; 
+            text-decoration: none;
+        }
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+</style>
+</head>
+<body>
+    <form action="/main" class="back_to_home" id="back" method="get">
+        <input type="submit" value="Back">
+    </form>
+
+
+    <h1>Comments review</h1>
+    <h2>Please select one wine to review its comments: </h2>
+    <!-- submit the search input to prediction function-->
+    <form action="/main/comments" autocomplete="off" id="comments">
+        Name:<br>
+        <input type="text" name="country"  size="50" value="Nicosia 2013 VulkÃ  Bianco  (Etna)">
+        <br>
+        <input type="submit" class="function_3" value="Review" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="Reset">
+    </form>
+    <h2 style="margin-top:1%">You can add your comment below:</h2>
+    <form action="/main/comments" autocomplete="off" id="add">
+        Name:<br>
+        <input type="text" name="country"  size="50" value="Nicosia 2013 VulkÃ  Bianco  (Etna)"><br>
+        Comment:<br>
+        <input type="text" name="add_comments" style="width:500px;height:350px">
+        <br>
+        <input type="submit" class="function_3_2" value="Add" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="Reset">
+
+    </form>
+    <br>
+    <a href="/main/prediction" target="_blank" id="first">Prediction</a>&nbsp;&nbsp;
+    <a href="/main/rankRetrieve" target="_blank">Rank retrieve</a>&nbsp;&nbsp;
+    <!--<a href="/purchaseAddress" target="_blank">Purchase address</a>&nbsp;&nbsp;-->
+
+</body>
+</html>
