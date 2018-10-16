@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Price Prediction</title>
+    <title>Prediction Result and Recommendation</title>
     <style>
         body {
             background-color:aliceblue;
@@ -24,15 +24,6 @@
         #back{
             margin-left: 5%;
             margin-top:5%;
-        }
-        #pred {
-
-            font-size:20px;
-            color: black;
-            text-align: center;
-        }
-        #first {
-            margin-left: 43%;
         }
         a {
             font-size: 20px;
@@ -66,22 +57,21 @@
     </form>
 
     <div>
-        <h1>Price Prediction</h1>
-        <h2>Please input the attributes of wines: </h2>
-        <!-- submit the search input to prediction function-->
-        <form action="/main/prediction" autocomplete="off" id="pred">
-            Country: <input type="text" name="Country"  size="100" value="Italy"><br>
-            Variety: <input type="text" name="Variety"  size="101" value="White Blend"><br>
-            Winery: <input type="text" name="Winery"  size="101" value="Nicosia"><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;        <input type="submit"  value="Predict">
-                    <input type="reset" value="Reset"><br>
-                    <h3>prediction result:{{ price }}</h3>
-
-        </form>
+        <h1>Prediction Result and Recommendation</h1>
+        <h2>The price prediction result is: </h2>
+        <div class="number" style="text-align: center;">
+            {{price}}
+        </div>
+        <h2>According to your search, our recommendation is showed below:</h2>
+        <div class="table" style="text-align: center;">
+            {{table}}
+        </div>
     </div>
     <br>
+    <div style="margin-left: 42%">
     <a href="/main/rankRetrieve" target="_blank" id="first">Rank retrieve</a>&nbsp;&nbsp;
     <!--<a href="/purchaseAddress" target="_blank">Purchase address</a>&nbsp;&nbsp;-->
     <a href="/main/comments" target="_blank">Comments</a>&nbsp;&nbsp;
+    </div>
 </body>
 </html>
