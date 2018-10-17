@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Description Search_step2</title>
+    <style>
+        body {
+            background-color:aliceblue;
+        }
+        h1 {
+            font-size:50px;
+            color:#cc0066;
+            text-align:center;
+        }
+        h2 {
+            font-size:40px;
+            color:#8e0811;
+            margin-top:5%;
+            text-align: center;
+        }
+        h3{
+            text-align:center;
+        }
+        #back{
+            margin-left: 5%;
+            margin-top:5%;
+        }
+
+        a {
+            font-size: 20px;
+        }
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color: pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/main" class="back_to_home" id="back" method="get">
+        <input type="submit" value="Back">
+    </form>
+
+
+    <div>
+        <h1>Description Search</h1>
+        <h2>Next, please select its attributes you are familiar with: </h2>
+    </div>
+    <form action="/main/redwine_api_2" class="search" method="get" style="margin-left:38%">
+        Attr1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attr2:<br/>
+        value1:<input type="checkbox" checked="yes" name="attr1" value="value1" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        value1:<input type="checkbox" checked="yes" name="attr2" value="value1" />
+        <br />
+        value2:<input type="checkbox" checked="yes" name="attr1" value="value2" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        value2:<input type="checkbox" checked="yes" name="attr2" value="value2" />
+        <br />value3:<input type="checkbox"  name="attr1" value="value3" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        value3:<input type="checkbox"  name="attr2" value="value1" />
+        <br />value4:<input type="checkbox"  name="attr1" value="value4" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        value4:<input type="checkbox"  name="attr2" value="value4" />
+        <br />
+        <input type="submit" value="Submit" style="margin-left: 4%">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" value="reset">
+    <br>
+    <br>
+    <br>
+    <br>
+        <div >
+    <a href="/main/rankRetrieve" target="_blank" style="margin-left:1%;" >Rank retrieve</a>&nbsp;&nbsp;
+    <!--<a href="/purchaseAddress" target="_blank">Purchase address</a>&nbsp;&nbsp;-->
+    <a href="/main/comments" target="_blank">Comments</a>&nbsp;&nbsp;
+    </div>
+
+</body>
+</html>
