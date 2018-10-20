@@ -26,6 +26,9 @@
             margin-top:5%;
         }
 
+        #first {
+            margin-left: 31%;
+        }
         a {
             font-size: 20px;
         }
@@ -61,15 +64,20 @@
         <h1>Search Result</h1>
         <h2>The wine you may want to find: </h2>
     </div>
-    <div class="img" style="text-align: center;">
-        Name:{{name_1}}{{name_2}}{{name_3}}{{link_1}}{{link_2}}{{link_3}}
+    <div style="text-align: center;">
+        Name:{{name_1}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price:{{name_2}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Variety:{{ name_3 }}
     </div>
+    <div class="img" style="text-align: center;">
+        <p>
+            <img src='{{ url }}'/>
+        </p>
 
+    </div>
     <br>
     <br>
     <br>
     <br>
-    <div style="margin-left: 40%;">
+    <div>
         <a href="/main/prediction" target="_blank"  id="first">Prediction</a>&nbsp;&nbsp;
     <a href="/main/rankRetrieve" target="_blank" >Rank retrieve</a>&nbsp;&nbsp;
     <!--<a href="/purchaseAddress" target="_blank">Purchase address</a>&nbsp;&nbsp;-->

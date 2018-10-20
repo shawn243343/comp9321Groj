@@ -189,10 +189,10 @@ def match_result():
             url_2 += f'&palate={i}'
         for i in flavor:
             url_2 += f'&flavor={i}'
-    print(ff)
     response = requests.post(url_2, headers={"Accept": "application/json"})
     data = response.json()
-    return render_template('searchResult.html',name_1=data['name'],name_2=data['description'])
+    print(data['url'])
+    return render_template('searchResult.html',name_1=data['name'],name_2=data['price'],name_3=data['variety'],url=data['url'])
 
 
 

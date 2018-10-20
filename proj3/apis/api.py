@@ -72,8 +72,8 @@ def match():
     palate = args.get('palate')
     flavor = args.get('flavor')
     type = args.get('type')
-    print(palate)
-    print(flavor)
+    #print(palate)
+    #print(flavor)
     li=palate+flavor
     data = matching_function(type,li)
     return jsonify(data), 200
