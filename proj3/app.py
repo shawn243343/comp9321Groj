@@ -192,7 +192,7 @@ def match_result():
     response = requests.post(url_2, headers={"Accept": "application/json"})
     data = response.json()
     print(data['url'])
-    return render_template('searchResult.html',name_1=data['name'],name_2=data['price'],name_3=data['variety'],url=data['url'])
+    return render_template('searchResult.html',name_1=data['name'],name_2=data['price'],name_3=data['variety'],description=data['description'],url=data['url'])
 
 
 
